@@ -1,0 +1,34 @@
+{
+  "name": "vendor_name/php-di-app",
+  "description": "description",
+  "minimum-stability": "stable",
+  "license": "proprietary",
+  "authors": [
+    {
+      "name": "TMC",
+      "email": "email@example.com"
+    }
+  ],
+  "require": {
+    "php-di/php-di": "^6"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^9",
+    "squizlabs/php_codesniffer": "^3"
+  },
+  "autoload": {
+    "psr-4": {
+      "App\\": "src/App/",
+      "Database\\": "src/Database/",
+      "User\\": "src/User/"
+    },
+    "files": [
+      "config/container.php"
+    ]
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "App\\Tests\\": "tests/"
+    }
+  }
+}
