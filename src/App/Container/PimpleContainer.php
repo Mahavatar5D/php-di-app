@@ -14,9 +14,9 @@ class PimpleContainer extends BaseContainer
     }
 
     /**
-     * @return self
+     * @return BaseContainer
      */
-    public function create(): self
+    public function create(): BaseContainer
     {
         return $this;
     }

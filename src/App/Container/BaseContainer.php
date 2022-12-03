@@ -5,9 +5,9 @@ namespace App\Container;
 abstract class BaseContainer
 {
     /**
-     * @return mixed
+     * @return self
      */
-    abstract protected function create(): mixed;
+    abstract protected function create(): self;
 
     /**
      * @return mixed

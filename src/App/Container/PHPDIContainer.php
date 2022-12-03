@@ -22,10 +22,10 @@ class PHPDIContainer extends BaseContainer
     }
 
     /**
-     * @return self
+     * @return BaseContainer
      * @throws Exception
      */
-    public function create(): self
+    public function create(): BaseContainer
     {
         try {
             $this->container = $this->containerBuilder->build();
