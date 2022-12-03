@@ -4,6 +4,8 @@ namespace App\Container;
 
 use DI\Container;
 use DI\ContainerBuilder;
+use DI\DependencyException;
+use DI\NotFoundException;
 use Exception;
 
 class PHPDIContainer extends BaseContainer
@@ -39,6 +41,20 @@ class PHPDIContainer extends BaseContainer
     public function getContainer(): Container
     {
         return $this->container;
+    }
+
+    /**
+     * @param string $name
+     * @return mixed
+     * @throws Exception
+     */
+    public function get(string $name): mixed
+    {
+        try {
+            return $this->container->get($name);
+        } catch (DependencyException|NotFoundException $e) {
+            throw new  Exception($e->getMessage());
+        }
     }
 
     /**

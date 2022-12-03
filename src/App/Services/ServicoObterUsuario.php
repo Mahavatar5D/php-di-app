@@ -16,7 +16,7 @@ final class ServicoObterUsuario
     public static function obterUsuario(BaseContainer $container): User
     {
         try {
-            return $container->getContainer()->get(User::class);
+            return $container->get(User::class);
         } catch (Exception $e) {
             throw new Exception($e->getMessage());
         }

@@ -2,15 +2,9 @@
 
 namespace User;
 
-use Database\Database;
-
 class User
 {
-    private Database $database;
-
-    public function __construct(Database $database)
+    public function __construct()
     {
-        $this->database = $database;
-        $this->database->connect();
     }
 }
