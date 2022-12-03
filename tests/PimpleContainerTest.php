@@ -14,7 +14,7 @@ class PimpleContainerTest extends TestCase
     /**
      * @throws Exception
      */
-    public function testReturnUserObject()
+    public function testReturnUserObject(): void
     {
         // Create Pimple container with definitions instance.
         $containerBuilder = new PimpleContainer(new Container());

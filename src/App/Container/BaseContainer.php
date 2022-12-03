@@ -7,16 +7,16 @@ abstract class BaseContainer
     /**
      * @return self
      */
-    abstract protected function create(): self;
+    abstract public function create(): self;
 
     /**
      * @return mixed
      */
-    abstract protected function getContainer(): mixed;
+    abstract public function getContainer(): mixed;
 
     /**
      * @param string $name
      * @return mixed
      */
-    abstract protected function get(string $name): mixed;
+    abstract public function get(string $name): mixed;
 }

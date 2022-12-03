@@ -14,7 +14,7 @@ class PHPDIContainerTest extends TestCase
     /**
      * @throws Exception
      */
-    public function testReturnUserObject()
+    public function testReturnUserObject(): void
     {
         // Create PHP-DI container with definitions instance.
         $containerBuilder = new PHPDIContainer(new ContainerBuilder());
