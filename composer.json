@@ -33,9 +33,11 @@
     }
   },
   "scripts": {
-    "stan": "vendor/bin/phpstan --xdebug analyse --level 8 src tests"
+    "stan": "vendor/bin/phpstan --xdebug analyse --level 8 src tests",
+    "cs":   "vendor/bin/phpcs src/User"
   },
   "scripts-descriptions": {
-    "stan": "Run static analysis with phpstan"
+    "stan": "Run static analysis with phpstan",
+    "cs":   "Check coding style compliance to PSR12 with phpcs"
   }
 }
