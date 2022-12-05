@@ -3,10 +3,10 @@
 namespace App\Tests;
 
 use App\Container\PHPDIContainer;
-use App\Services\ServicoObterUsuario;
 use DI\ContainerBuilder;
 use Exception;
 use PHPUnit\Framework\TestCase;
+use User\Services\UserService;
 use User\User;
 
 class PHPDIContainerTest extends TestCase
@@ -23,7 +23,7 @@ class PHPDIContainerTest extends TestCase
         $container = $containerBuilder->create();
 
         try {
-            $user = ServicoObterUsuario::obterUsuario($container);
+            $user = UserService::getUser($container);
         } catch (Exception $e) {
             throw new Exception($e->getMessage());
         }

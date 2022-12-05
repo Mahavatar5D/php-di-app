@@ -3,10 +3,10 @@
 namespace App\Tests;
 
 use App\Container\PimpleContainer;
-use App\Services\ServicoObterUsuario;
 use Exception;
 use PHPUnit\Framework\TestCase;
 use Pimple\Container;
+use User\Services\UserService;
 use User\User;
 
 class PimpleContainerTest extends TestCase
@@ -22,7 +22,7 @@ class PimpleContainerTest extends TestCase
         $container = $containerBuilder->create();
 
         try {
-            $user = ServicoObterUsuario::obterUsuario($container);
+            $user = UserService::getUser($container);
         } catch (Exception $e) {
             throw new Exception($e->getMessage());
         }

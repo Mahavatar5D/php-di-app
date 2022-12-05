@@ -1,5 +1,16 @@
 <?php
 
+/**
+ * Copyright (c) 2022 Daniel Bueno
+ * php version 8.1.12
+ *
+ * @category PHP
+ * @package  PHPDIContainer
+ * @author   Daniel Bueno <mahavatar5d@gmail.com>
+ * @license  http://www.gnu.org/copyleft/gpl.html GNU General Public License
+ * @link     http://127.0.0.1/php-di-app
+ */
+
 namespace App\Container;
 
 use DI\Container;
@@ -8,13 +19,24 @@ use DI\DependencyException;
 use DI\NotFoundException;
 use Exception;
 
+/**
+ * BaseContainer abstract Class.
+ *
+ * @category Class
+ * @package  PHPDIContainer
+ * @author   Daniel Bueno <mahavatar5d@gmail.com>
+ * @license  http://www.gnu.org/copyleft/gpl.html GNU General Public License
+ * @link     http://127.0.0.1/php-di-app
+ */
 class PHPDIContainer extends BaseContainer
 {
     protected ContainerBuilder $containerBuilder;
     protected Container $container;
 
     /**
-     * @param ContainerBuilder $containerBuilder
+     * Constructor.
+     *
+     * @param ContainerBuilder $containerBuilder Helper to create and configure a Container.
      */
     public function __construct(ContainerBuilder $containerBuilder)
     {
@@ -22,6 +44,8 @@ class PHPDIContainer extends BaseContainer
     }
 
     /**
+     * Gets a wrapper for concrete container.
+     *
      * @return BaseContainer
      * @throws Exception
      */
@@ -36,6 +60,8 @@ class PHPDIContainer extends BaseContainer
     }
 
     /**
+     * Gets a concrete container.
+     *
      * @return Container
      */
     public function getContainer(): Container
@@ -44,7 +70,10 @@ class PHPDIContainer extends BaseContainer
     }
 
     /**
-     * @param string $name
+     * Gets an entry of the container by its name.
+     *
+     * @param string $name Entry name or a class name.
+     *
      * @return mixed
      * @throws Exception
      */
@@ -52,12 +81,14 @@ class PHPDIContainer extends BaseContainer
     {
         try {
             return $this->container->get($name);
-        } catch (DependencyException|NotFoundException $e) {
+        } catch (DependencyException | NotFoundException $e) {
             throw new  Exception($e->getMessage());
         }
     }
 
     /**
+     * Gets a helper to create and configure a Container.
+     *
      * @return ContainerBuilder
      */
     public function getContainerBuilder(): ContainerBuilder
