@@ -24,7 +24,8 @@
       "User\\": "src/User/"
     },
     "files": [
-      "config/container.php"
+      "config/container.php",
+      "helpers/functions.php"
     ]
   },
   "autoload-dev": {
