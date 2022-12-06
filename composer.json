@@ -34,12 +34,20 @@
   },
   "scripts": {
     "stan": "vendor/bin/phpstan --xdebug analyse --level 8 src tests",
-    "cs":   "vendor/bin/phpcs src",
-    "cbf":  "vendor/bin/phpcbf src"
+    "cs-check": "vendor/bin/phpcs src",
+    "cs-fix": "vendor/bin/phpcbf src",
+    "cs-config": [
+      "vendor/bin/phpcs --config-set default_standard PSR12",
+      "vendor/bin/phpcs --config-set report_format summary",
+      "vendor/bin/phpcs --config-set show_progress 1",
+      "vendor/bin/phpcs --config-set report_width 120",
+      "vendor/bin/phpcs --config-set color 1",
+      "vendor/bin/phpcs --config-set encoding utf-8"
+    ]
   },
   "scripts-descriptions": {
     "stan": "Run static analysis with phpstan",
-    "cs":   "Check coding style compliance to PSR12 with phpcs",
-    "cbf":  "Fix code errors and warnings reported from phpcs"
+    "cs-check": "Check coding style compliance to PSR12 with phpcs",
+    "cs-fix": "Fix code errors and warnings reported from phpcs"
   }
 }
