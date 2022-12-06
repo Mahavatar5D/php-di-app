@@ -18,7 +18,7 @@ class PimpleContainerTest extends TestCase
     {
         // Create Pimple container with definitions instance.
         $containerBuilder = new PimpleContainer(new Container());
-        $containerBuilder->getContainer()->offsetSet(User::class, new User());
+        $containerBuilder->Set(User::class, new User());
         $container = $containerBuilder->create();
 
         try {

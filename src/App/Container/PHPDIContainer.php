@@ -95,4 +95,17 @@ class PHPDIContainer extends BaseContainer
     {
         return $this->containerBuilder;
     }
+
+    /**
+     * Define an object or a value in the container.
+     *
+     * @param string $name Entry name.
+     * @param mixed $value Value, define objects.
+     *
+     * @return void
+     */
+    public function set(string $name, mixed $value): void
+    {
+        $this->container->set($name, $value);
+    }
 }

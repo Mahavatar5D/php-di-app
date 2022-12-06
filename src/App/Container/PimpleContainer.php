@@ -69,4 +69,17 @@ class PimpleContainer extends BaseContainer
     {
         return $this->container->offsetGet($name);
     }
+
+    /**
+     * Define an object or a value in the container.
+     *
+     * @param string $name Entry name.
+     * @param mixed $value Value, define objects.
+     *
+     * @return void
+     */
+    public function set(string $name, mixed $value): void
+    {
+        $this->container->offsetSet($name, $value);
+    }
 }

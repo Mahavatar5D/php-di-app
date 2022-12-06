@@ -46,4 +46,14 @@ abstract class BaseContainer
      * @return mixed
      */
     abstract public function get(string $name): mixed;
+
+    /**
+     * Define an object or a value in the container.
+     *
+     * @param string $name Entry name.
+     * @param mixed $value Value, define objects.
+     *
+     * @return void
+     */
+    abstract public function set(string $name, mixed $value): void;
 }
