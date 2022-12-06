@@ -49,6 +49,7 @@
   "scripts-descriptions": {
     "stan": "Run static analysis with phpstan",
     "cs-check": "Check coding style compliance to PSR12 with phpcs",
-    "cs-fix": "Fix code errors and warnings reported from phpcs"
+    "cs-fix": "Fix code errors and warnings reported from phpcs",
+    "cs-config": "Config PHPCS standard sniffs"
   }
 }
