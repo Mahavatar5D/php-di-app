@@ -1,12 +1,12 @@
 {
-  "name": "vendor_name/php-di-app",
+  "name": "mahavatar5d/php-di-app",
   "description": "description",
   "minimum-stability": "stable",
   "license": "proprietary",
   "authors": [
     {
-      "name": "TMC",
-      "email": "email@example.com"
+      "name": "Daniel Bueno",
+      "email": "mahavatar5d@gmail.com"
     }
   ],
   "require": {
